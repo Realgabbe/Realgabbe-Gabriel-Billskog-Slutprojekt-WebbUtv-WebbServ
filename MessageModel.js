@@ -16,3 +16,7 @@ exports.createMessage = (inMail, inText) => {
 
     return message
 }
+
+exports.getAllMessages = async () => {
+    return await Message.find({});
+}

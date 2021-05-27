@@ -23,18 +23,44 @@ app.set('view engine' , 'ejs')
 //Lyssnar på GET requests på addressen <domain>/
 app.get('/', (req, res) => {
     //rendera sidan index.ejs
-  res.render('/index.ejs')
+  res.render('index.ejs')
+})
+
+app.get('/mina_hundar', (req, res) => {
+  res.render('mina_hundar.ejs')
+})
+
+app.get('/om_mig', (req, res) => {
+res.render('om_mig.ejs')
+})
+
+app.get('/hundar_jag_minns', (req, res) => {
+res.render('hundar_jag_minns')
+})
+
+app.get("/messages", async (req, res) => {
+  const messages = await MessageModel.getAllMessages();
+  res.render('kontakt.ejs', { messages: messages });
+})
+
+app.get('/kontakt', (req, res) => {
+res.render('kontakt.ejs', { messages: [] })
+})
+
+app.get('/leiya', (req, res) => {
+res.render('leiya.ejs')
 })
 
 //Lyssnar på POST requests på addressen <domain>/
-app.post('/', function (req, res) {
+app.post('/', async (req, res) => {
     //Skapa ett Message objekt
     const message = MessageModel.createMessage(req.body.email, req.body.message)
+
     //spara elementet Message i databasen
-    dbModule.storeElement(message)
+    await dbModule.storeElement(message)
 
     //Omdirigera klienten till huvudsidan
-    res.redirect('/')
+    res.redirect('/messages')
 })
 
 //Sätt igång servern så att den kan ta emot requests på vald port.

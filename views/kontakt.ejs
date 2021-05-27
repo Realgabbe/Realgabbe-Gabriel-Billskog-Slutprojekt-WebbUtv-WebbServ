@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star's of Sky</title>
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+     
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <a class="navbar-brand" href="/kontakt">Kontakta mig</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/">Hem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mina_hundar">Mina hundar</a>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="om_mig">Om mig</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hundar_jag_minns">Hundar jag minns</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </header>
+    </header>
+    <main>
+        <h1>Kontakta mig</h1>
+        <hr>
+        <form action="/" method="post">
+            <label for="name">Ditt namn:</label><br>
+            <input type="name" name="name"><br><br>
+
+            <label for="email">Din E-post adress:</label><br>
+            <input type="email" name="email"><br><br>
+
+            <label for="message">Ditt meddelande:</label><br>
+            <input type="message" name="message"><br><br>
+
+            <button type="submit" value="Submit">Submit</button>
+        </form> 
+
+        <div class="messageBoard">
+          <% for( let index = 0; index < messages.length; index++ ) { %>
+            
+              <h3><%= messages[index].email %> </h3>
+              <p><%= messages[index].text %> </p>
+              <br>
+              
+          <% } %>
+      </div>
+    </main>
+</body>
+
+</html>
