@@ -21,10 +21,14 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="bg-light">
     <header>
+      <div style="margin-top: 5px;">
+        <h1 class="text-center font-weight-bolder">Hundar jag minns</h1>
+        <hr>
+      </div>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <a class="navbar-brand" href="/hundar_jag_minns">Hundar jag minns</a>
+            <a class="navbar-brand font-weight-bold" href="/hundar_jag_minns">Hundar jag minns</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -47,17 +51,23 @@
           </nav>
     </header>
     <main>
-        <h1>Hundar jag minns</h1>
-        <hr>
-        <div class="col">
-            <h1>Charlie</h1>
-            <img src="images/charlie.jpg">
-        </div>
-        <div class="col">
-            <h1>Tindra</h1>
-            <img src="images/tindra.jpg">
-        </div>
+      <div class="container-fluid" style="margin-bottom: 30px; margin-top: 30px;">
+        <div class="row">
+          <div class="col-sm-3 text-center" style="margin-left: auto; margin-bottom: auto;">
+            <h1 class="font-weight-bold" style="margin-bottom: 2%;">Charlie</h1>
+            <img class="rounded-circle" src="images/charlie.jpg" width="auto">
+          </div>
+        </span>
+          <div class="col-sm-3 float-right text-center" style="margin-right: auto;">
+            <h1 class="font-weight-bold" style="margin-bottom: 2%;">Tindra</h1>
+            <img class="rounded-circle" src="images/tindra.jpg" width="auto">
+          </div>
+        </div> 
+      </div>
     </main>
+    <div class="jumbotron text-center fixed-bottom" style="margin-bottom:0">
+      <p>© 2021 Gabriel Billskog</p>
+    </div>
 </body>
 
 </html>

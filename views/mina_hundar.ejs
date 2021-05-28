@@ -23,8 +23,12 @@
 
 <body>
     <header>
+        <div style="margin-top: 5px;">
+            <h1 class="text-center font-weight-bolder">Mina hundar</h1>
+            <hr>
+          </div>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <a class="navbar-brand" href="/mina_hundar">Mina hundar</a>
+            <a class="navbar-brand font-weight-bold" href="/mina_hundar">Mina hundar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -46,13 +50,90 @@
             </div>
           </nav>
     </header>
-    <main>
-        <h1>Mina hundar</h1>
-        <hr>
-        <img class="img" src="images/Leiyaa_klippt.png">
-        <button><a href="leiya">Leiya</a></button>
+             <!-- Portfolio Section-->
+             <section class="page-section portfolio" id="portfolio">
+                <div class="container" style="margin-top: 2vh;">
+                    <!-- Icon Divider-->
+                    <div class="divider-custom">
+                        <div class="divider-custom-line"></div>
+                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                        <div class="divider-custom-line"></div>
+                    </div>
+                    <!-- Portfolio Grid Items-->
+                    <div class="row justify-content-center">
+                        <!-- Portfolio Item 1-->
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="images/leiyaa_klippt.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Leiya</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="images/poetiskleiya.jpg" alt="" />
+                                    <!-- Portfolio Modal - Text-->
+                                        <div>
+                                            <div class="card" style="width: 30rem;">
+                                                <div class="card-body">
+                                                <p class="card-text text-secondary">
+                                                    <b>RED BLOOMS DREAM FOR ME</b> Leiya är en ung, äventyrlig dam som älskar skog
+                                                    vatten
+                                                    och naturen. Hon är
+                                                    lugn och harmonisk i nya miljöer med människor och andra djur. Hon är alltid glad och tycker om att
+                                                    möta nya människor.
+                            
+                                                    Hon är med mig på jobbet och är inte bara min bästa arbetskamrat utan även kundernas favorit! Varje
+                                                    dag med henne är ett spännande äventyr.
+                            
+                            
+                                                    Här är hennes data:
+                                                    SE34579/2017
+                                                    HD grad A
+                                                    ED ua (0)
+                                                    Öga UA
+                                                    BPH med skott genomförd.
+                                                    Utställning: excellent, BIR valp My Dog 2017 m.m.
+                                                </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
+    <div class="jumbotron text-center fixed-bottom" style="margin-bottom:0">
+        <p>© 2021 Gabriel Billskog</p>
+    </div>
 </body>
 
 </html>
